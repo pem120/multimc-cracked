@@ -107,7 +107,7 @@ jobs:
       - name: Install Qt
         if: steps.qt-cached.outputs.cache-hit != 'true'
         shell: cmd
-        run: installer.exe -v --script nonInteractive.qs --silent
+        run: installer.exe   --accept-licenses --default-answer --confirm-command install qt.qt5.5158.win64_msvc2019_64 qt.qt5.5158.qtcharts qt.qt5.5158.debug_info qt.qt5.5158.src qt.tools.qtcreator
 
       - name: Setup CMake
         run: |
